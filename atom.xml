@@ -2,11 +2,11 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>Stay Hungry</title>
   <subtitle>stay foolish</subtitle>
-  <link href="/blog/atom.xml" rel="self"/>
+  <link href="/blog-dev/atom.xml" rel="self"/>
   
-  <link href="http://yoursite.com/blog/"/>
+  <link href="http://yoursite.com/blog-dev/"/>
   <updated>2017-01-03T02:36:28.323Z</updated>
-  <id>http://yoursite.com/blog/</id>
+  <id>http://yoursite.com/blog-dev/</id>
   
   <author>
     <name>Yu Shi</name>
@@ -17,8 +17,8 @@
   
   <entry>
     <title>Hello World</title>
-    <link href="http://yoursite.com/blog/2017/01/03/hello-world/"/>
-    <id>http://yoursite.com/blog/2017/01/03/hello-world/</id>
+    <link href="http://yoursite.com/blog-dev/2017/01/03/hello-world/"/>
+    <id>http://yoursite.com/blog-dev/2017/01/03/hello-world/</id>
     <published>2017-01-03T02:36:28.323Z</published>
     <updated>2017-01-03T02:36:28.323Z</updated>
     
