@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://stayhungrystayfoollish.github.io/"/>
-  <updated>2017-01-03T02:36:28.323Z</updated>
+  <updated>2017-01-07T09:15:26.776Z</updated>
   <id>https://stayhungrystayfoollish.github.io/</id>
   
   <author>
@@ -14,6 +14,38 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>background背景属性</title>
+    <link href="https://stayhungrystayfoollish.github.io/2017/01/07/background%E5%B1%9E%E6%80%A7/"/>
+    <id>https://stayhungrystayfoollish.github.io/2017/01/07/background属性/</id>
+    <published>2017-01-07T08:15:02.000Z</published>
+    <updated>2017-01-07T09:15:26.776Z</updated>
+    
+    <content type="html"><![CDATA[<p>background背景属性主要用于设置html页面背景的样式，它的值是复合属性值组合，也就是背景单词的值可以跟多个属性值，值与值之间使用一个空格间隔即可。它主要包含以下属性：<br>background-color || background-image || background-repeat || background-attachment || background-position (css2)<br>background-clip || background-origin || background-size || background-break (css3)</p>
+<p><strong>1.background-color: </strong><br>background-color 属性为元素设置一种纯色。这种颜色会填充元素的内容、内边距和边框区域，扩展到元素边框的外边界（但不包括外边距）。如果边框有透明部分（如虚线边框），会透过这些透明部分显示出背景色。</p>
+<p>background-color属性在css3版本里面稍微做了增强，除了指定background-color背景颜色之外，还可以对不使用的标签元素背景图片进行去色处理，用于当背景图像不可见时保持与文本颜色有一定的对比度。<br>background-color: green / blue;此例子中，背景颜色可能是绿色，然而，如果底部背景图片无效的话，蓝色将代替绿色来显示。如果没有指定某个颜色，它将其视为透明。</p>
+<p><strong>2.background-image: </strong><br>background-image 属性为元素设置背景图像。元素的背景占据了元素的全部尺寸，包括内边距和边框，但不包括外边距。默认地，背景图像位于元素的左上角，并在水平和垂直方向上重复。提示：请设置一种可用的背景颜色，这样的话，假如背景图像不可用，页面也可获得良好的视觉效果。</p>
+<p><strong>3.background-repeat: </strong></p>
+<p><strong>4.background-attachment： </strong></p>
+<p><strong>5.background-position: </strong></p>
+<p><strong>6.background-clip: </strong></p>
+<p><strong>7.background-origin：  </strong></p>
+<p><strong>8.background-size：  </strong></p>
+<p><strong>9.background-break： </strong></p>
+<p><strong>background-color </strong></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;background背景属性主要用于设置html页面背景的样式，它的值是复合属性值组合，也就是背景单词的值可以跟多个属性值，值与值之间使用一个空格间隔即可。它主要包含以下属性：&lt;br&gt;background-color || background-image || backg
+    
+    </summary>
+    
+    
+      <category term="css" scheme="https://stayhungrystayfoollish.github.io/tags/css/"/>
+    
+  </entry>
   
   <entry>
     <title>Hello World</title>
