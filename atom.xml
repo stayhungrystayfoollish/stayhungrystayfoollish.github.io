@@ -51,7 +51,7 @@
     <link href="https://stayhungrystayfoollish.github.io/2017/01/17/%E6%BC%AB%E8%B0%88ajax/"/>
     <id>https://stayhungrystayfoollish.github.io/2017/01/17/漫谈ajax/</id>
     <published>2017-01-17T02:52:38.000Z</published>
-    <updated>2017-01-17T12:05:28.462Z</updated>
+    <updated>2017-01-17T13:09:17.758Z</updated>
     
     <content type="html"><![CDATA[<h2 id="ajax通用写法："><a href="#ajax通用写法：" class="headerlink" title="ajax通用写法："></a>ajax通用写法：</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">$.ajax(&#123;</div><div class="line">    url: &quot;http://www.hzhuti.com&quot;,</div><div class="line">    dataType: &quot;json&quot;,</div><div class="line">    async: true,</div><div class="line">    type: &quot;post&quot;,</div><div class="line">    data: &#123;id: value&#125;,</div><div class="line">    beforeSend: function (request) &#123;</div><div class="line">        request.setRequestHeader(&quot;Content-type&quot;, &quot;application/json&quot;);</div><div class="line">        request.setRequestHeader(&quot;Source&quot;, &quot;101&quot;);</div><div class="line">        request.setRequestHeader(&quot;Token&quot;, &quot;aaw--wssw-ss...&quot;);</div><div class="line">    &#125;,</div><div class="line">    success: function (data) &#123;</div><div class="line"></div><div class="line">    &#125;,</div><div class="line">    complete: function () &#123;</div><div class="line"></div><div class="line">    &#125;,</div><div class="line">    error: function () &#123;</div><div class="line"></div><div class="line">    &#125;</div><div class="line"></div><div class="line">&#125;)</div></pre></td></tr></table></figure>
 <a id="more"></a>
@@ -134,7 +134,7 @@ $.ajax();
       <category term="js" scheme="https://stayhungrystayfoollish.github.io/categories/js/"/>
     
     
-      <category term="jquery ajax" scheme="https://stayhungrystayfoollish.github.io/tags/jquery-ajax/"/>
+      <category term="jquery-ajax" scheme="https://stayhungrystayfoollish.github.io/tags/jquery-ajax/"/>
     
   </entry>
   
