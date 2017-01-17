@@ -92,7 +92,7 @@
 <meta property="og:url" content="https://stayhungrystayfoollish.github.io/2017/01/07/background属性/index.html">
 <meta property="og:site_name" content="Stay Hungry">
 <meta property="og:description" content="background背景属性主要用于设置html页面背景的样式，它的值是复合属性值组合，也就是背景单词的值可以跟多个属性值，值与值之间使用一个空格间隔即可。它主要包含以下属性：background-color || background-image || background-repeat || background-attachment || background-position (css2)">
-<meta property="og:updated_time" content="2017-01-07T10:37:03.138Z">
+<meta property="og:updated_time" content="2017-01-17T03:15:50.186Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="background背景属性">
 <meta name="twitter:description" content="background背景属性主要用于设置html页面背景的样式，它的值是复合属性值组合，也就是背景单词的值可以跟多个属性值，值与值之间使用一个空格间隔即可。它主要包含以下属性：background-color || background-image || background-repeat || background-attachment || background-position (css2)">
@@ -357,7 +357,7 @@
       
 
       
-        <p>background背景属性主要用于设置html页面背景的样式，它的值是复合属性值组合，也就是背景单词的值可以跟多个属性值，值与值之间使用一个空格间隔即可。它主要包含以下属性：<br>background-color || background-image || background-repeat || background-attachment || background-position (css2)<br>background-clip || background-origin || background-size || background-break (css3)<br>范例：background：</p>
+        <p>background背景属性主要用于设置html页面背景的样式，它的值是复合属性值组合，也就是背景单词的值可以跟多个属性值，值与值之间使用一个空格间隔即可。它主要包含以下属性：<br>background-color || background-image || background-repeat || background-attachment || background-position (css2)<br>background-clip || background-origin || background-size || background-break (css3)</p>
 <p><strong>1.background-color: </strong><br>为元素设置一种纯色。这种颜色会填充元素的内容、内边距和边框区域，扩展到元素边框的外边界（但不包括外边距）。如果边框有透明部分（如虚线边框），会透过这些透明部分显示出背景色。</p>
 <p>background-color属性在css3版本里面稍微做了增强，除了指定background-color背景颜色之外，还可以对不使用的标签元素背景图片进行去色处理，用于当背景图像不可见时保持与文本颜色有一定的对比度。<br>background-color: green / blue;此例子中，背景颜色可能是绿色，然而，如果底部背景图片无效的话，蓝色将代替绿色来显示。如果没有指定某个颜色，它将其视为透明。</p>
 <p><strong>2.background-image: </strong><br>为元素设置背景图像。元素的背景占据了元素的全部尺寸，包括内边距和边框，但不包括外边距。默认地，背景图像位于元素的左上角，并在水平和垂直方向上重复。提示：请设置一种可用的背景颜色，这样的话，假如背景图像不可用，页面也可获得良好的视觉效果。<br>范例： background-image: url(bgimage.gif);</p>
@@ -367,13 +367,13 @@
 <p><strong>4.background-attachment：scroll|fixed|local（css3） </strong><br>设置背景图像是否固定或者随着页面的其余部分滚动。属性值如下：</p>
 <p>fixed：背景图像相对于窗体固定。<br>scroll：背景图像相对于元素固定，也就是说当元素内容滚动时背景图像不会跟着滚动，因为背景图像总是要跟着元素本身。但会随元素的祖先元素或窗体一起滚动。<br>local（css3）：背景图像相对于元素内容固定，也就是说当元素随元素滚动时背景图像也会跟着滚动，因为背景图像总是要跟着内容。（CSS3）</p>
 <p><strong>5.background-position: top left|top center|top right|center left|center center|center right|bottom left|bottom center|bottom right </strong><br>设置背景图像的起始位置.这个属性设置背景原图像（由 background-image 定义）在x轴和y轴的位置，背景图像如果要重复，将从这一点开始。<br>提示：您需要把 background-attachment 属性设置为 “fixed”，才能保证该属性在 Firefox 和 Opera 中正常工作。也可以只设置1个值同时表示x轴和y轴的位置。<br>范例：background-position: center 100%(图片水平居中)</p>
-<p>##css3新增属性##</p>
-<p><strong>6.background-clip: padding-box|border-box|content-box </strong><br>background-clip 属性规定背景的绘制区域,它能够控制背景显示的位置。属性值如下：</p>
+<h2 id="css3新增属性"><a href="#css3新增属性" class="headerlink" title="css3新增属性"></a>css3新增属性</h2><p><strong>6.background-clip: padding-box|border-box|content-box </strong><br>background-clip 属性规定背景的绘制区域,它能够控制背景显示的位置。属性值如下：</p>
 <p>border-box：背景在border边框下开始显示<br>padding-box：背景在padding下开始显示，而不是border边框下开始<br>content-box：背景在内容区域下开始显示，而不是border边框下开始或padding下开始。</p>
 <p><strong>7.background-origin： padding-box|border-box|content-box  </strong><br>规定 background-position 属性相对于什么位置来定位。可以用background-position计算定位是从border，padding或content boxes内容区域算起（类似background-clip）。属性值如下：</p>
 <p>border-box：从border边框位置算起<br>padding-box：从padding位置算起<br>content-box：从content-box内容区域位置算起</p>
 <p><strong>8.background-size：length|percentage|cover|contain  </strong><br>background-size 属性规定背景图像的尺寸。属性值如下：</p>
 <p>length: 设置背景图像的宽度和高度<br>percentage: 以父元素的百分比来设置背景图像的宽度和高度<br>cover: 把背景图像扩展至足够大，以使背景图像完全覆盖<strong> 背景区域 </strong><br>contain: 把图像图像扩展至最大尺寸，以使其宽度和高度完全适应<strong> 内容区域 </strong><br>范例：background-size:100px 100px;background-size:50%</p>
+<p><strong> 注意： </strong>当背景只使用单一的颜色或者图片做背景时，可以合理使用background简写，而不必使用background-color或者background-image，因为合理使用简写可以帮助你清空其他相关的属性。合理使用简写是一种良好的防卫性编码方式,可以抵御未来的风险。<br>范例：background: rebeccapurple;<br>       background-color: rebeccapurple;<br>以上两行代码并不是等价的，前者简写可以确保得到纯色背景，而后者使用的是展开的形式，其背景有可能显示其他的图片或者渐变图案等等，因为同时还有一条background-image在起作用。</p>
 
       
     </div>
@@ -415,6 +415,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/01/17/漫谈ajax/" rel="prev" title="漫谈JQuery中的ajax">
+                漫谈JQuery中的ajax <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -468,8 +472,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.jpg"
@@ -482,7 +495,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-count">3</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -493,7 +506,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-count">2</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -545,6 +558,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#css3新增属性"><span class="nav-number">1.</span> <span class="nav-text">css3新增属性</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
     </div>
