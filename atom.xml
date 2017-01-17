@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://stayhungrystayfoollish.github.io/"/>
-  <updated>2017-01-17T11:42:08.581Z</updated>
+  <updated>2017-01-17T11:57:49.090Z</updated>
   <id>https://stayhungrystayfoollish.github.io/</id>
   
   <author>
@@ -16,11 +16,42 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Hello World</title>
+    <link href="https://stayhungrystayfoollish.github.io/2017/01/17/hello-world/"/>
+    <id>https://stayhungrystayfoollish.github.io/2017/01/17/hello-world/</id>
+    <published>2017-01-17T11:57:49.134Z</published>
+    <updated>2017-01-17T11:57:49.090Z</updated>
+    
+    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
+<a id="more"></a>
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt; for more info. If you get any problems when using Hexo, you can find the answer in &lt;a href=&quot;https://hexo.io/docs/troubleshooting.html&quot;&gt;troubleshooting&lt;/a&gt; or you can ask me on &lt;a href=&quot;https://github.com/hexojs/hexo/issues&quot;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&quot;Quick-Start&quot;&gt;&lt;a href=&quot;#Quick-Start&quot; class=&quot;headerlink&quot; title=&quot;Quick Start&quot;&gt;&lt;/a&gt;Quick Start&lt;/h2&gt;&lt;h3 id=&quot;Create-a-new-post&quot;&gt;&lt;a href=&quot;#Create-a-new-post&quot; class=&quot;headerlink&quot; title=&quot;Create a new post&quot;&gt;&lt;/a&gt;Create a new post&lt;/h3&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;$ hexo new &lt;span class=&quot;string&quot;&gt;&quot;My New Post&quot;&lt;/span&gt;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;More info: &lt;a href=&quot;https://hexo.io/docs/writing.html&quot;&gt;Writing&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&quot;Run-server&quot;&gt;&lt;a href=&quot;#Run-server&quot; class=&quot;headerlink&quot; title=&quot;Run server&quot;&gt;&lt;/a&gt;Run server&lt;/h3&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;$ hexo server&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
     <title>漫谈JQuery中的ajax</title>
     <link href="https://stayhungrystayfoollish.github.io/2017/01/17/%E6%BC%AB%E8%B0%88ajax/"/>
     <id>https://stayhungrystayfoollish.github.io/2017/01/17/漫谈ajax/</id>
     <published>2017-01-17T02:52:38.000Z</published>
-    <updated>2017-01-17T11:42:08.581Z</updated>
+    <updated>2017-01-17T12:05:28.462Z</updated>
     
     <content type="html"><![CDATA[<h2 id="ajax通用写法："><a href="#ajax通用写法：" class="headerlink" title="ajax通用写法："></a>ajax通用写法：</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">$.ajax(&#123;</div><div class="line">    url: &quot;http://www.hzhuti.com&quot;,</div><div class="line">    dataType: &quot;json&quot;,</div><div class="line">    async: true,</div><div class="line">    type: &quot;post&quot;,</div><div class="line">    data: &#123;id: value&#125;,</div><div class="line">    beforeSend: function (request) &#123;</div><div class="line">        request.setRequestHeader(&quot;Content-type&quot;, &quot;application/json&quot;);</div><div class="line">        request.setRequestHeader(&quot;Source&quot;, &quot;101&quot;);</div><div class="line">        request.setRequestHeader(&quot;Token&quot;, &quot;aaw--wssw-ss...&quot;);</div><div class="line">    &#125;,</div><div class="line">    success: function (data) &#123;</div><div class="line"></div><div class="line">    &#125;,</div><div class="line">    complete: function () &#123;</div><div class="line"></div><div class="line">    &#125;,</div><div class="line">    error: function () &#123;</div><div class="line"></div><div class="line">    &#125;</div><div class="line"></div><div class="line">&#125;)</div></pre></td></tr></table></figure>
 <a id="more"></a>
@@ -100,6 +131,8 @@ $.ajax();
     
     </summary>
     
+      <category term="js" scheme="https://stayhungrystayfoollish.github.io/categories/js/"/>
+    
     
       <category term="jquery ajax" scheme="https://stayhungrystayfoollish.github.io/tags/jquery-ajax/"/>
     
@@ -110,25 +143,25 @@ $.ajax();
     <link href="https://stayhungrystayfoollish.github.io/2017/01/07/background%E5%B1%9E%E6%80%A7/"/>
     <id>https://stayhungrystayfoollish.github.io/2017/01/07/background属性/</id>
     <published>2017-01-07T08:15:02.000Z</published>
-    <updated>2017-01-17T11:47:58.872Z</updated>
+    <updated>2017-01-17T12:06:29.396Z</updated>
     
     <content type="html"><![CDATA[<p>background背景属性主要用于设置html页面背景的样式，它的值是复合属性值组合，也就是背景单词的值可以跟多个属性值，值与值之间使用一个空格间隔即可。它主要包含以下属性：<br>background-color || background-image || background-repeat || background-attachment || background-position (css2)<br>background-clip || background-origin || background-size || background-break (css3)<br><a id="more"></a></p>
-<h2 id="1-background-color"><a href="#1-background-color" class="headerlink" title="1. background-color:"></a>1. background-color:</h2><p>为元素设置一种纯色。这种颜色会填充元素的内容、内边距和边框区域，扩展到元素边框的外边界（但不包括外边距）。如果边框有透明部分（如虚线边框），会透过这些透明部分显示出背景色。</p>
+<h2 id="background-color"><a href="#background-color" class="headerlink" title="background-color:"></a>background-color:</h2><p>为元素设置一种纯色。这种颜色会填充元素的内容、内边距和边框区域，扩展到元素边框的外边界（但不包括外边距）。如果边框有透明部分（如虚线边框），会透过这些透明部分显示出背景色。</p>
 <p>background-color属性在css3版本里面稍微做了增强，除了指定background-color背景颜色之外，还可以对不使用的标签元素背景图片进行去色处理，用于当背景图像不可见时保持与文本颜色有一定的对比度。<br>background-color: green / blue;此例子中，背景颜色可能是绿色，然而，如果底部背景图片无效的话，蓝色将代替绿色来显示。如果没有指定某个颜色，它将其视为透明。</p>
-<h2 id="2-background-image"><a href="#2-background-image" class="headerlink" title="2. background-image:"></a>2. background-image:</h2><p>为元素设置背景图像。元素的背景占据了元素的全部尺寸，包括内边距和边框，但不包括外边距。默认地，背景图像位于元素的左上角，并在水平和垂直方向上重复。提示：请设置一种可用的背景颜色，这样的话，假如背景图像不可用，页面也可获得良好的视觉效果。<br>范例： background-image: url(bgimage.gif);</p>
-<h2 id="3-background-repeat-repeat-repeat-x-repeat-y-no-repeat-space-css3-round-css3"><a href="#3-background-repeat-repeat-repeat-x-repeat-y-no-repeat-space-css3-round-css3" class="headerlink" title="3. background-repeat: repeat|repeat-x|repeat-y|no-repeat|space(css3)|round(css3) **"></a>3. background-repeat: repeat|repeat-x|repeat-y|no-repeat|space(css3)|round(css3) **</h2><p>设置是否及如何重复背景图像。默认地，背景图像在水平和垂直方向上重复。</p>
+<h2 id="background-image"><a href="#background-image" class="headerlink" title="background-image:"></a>background-image:</h2><p>为元素设置背景图像。元素的背景占据了元素的全部尺寸，包括内边距和边框，但不包括外边距。默认地，背景图像位于元素的左上角，并在水平和垂直方向上重复。提示：请设置一种可用的背景颜色，这样的话，假如背景图像不可用，页面也可获得良好的视觉效果。<br>范例： background-image: url(bgimage.gif);</p>
+<h2 id="background-repeat-repeat-repeat-x-repeat-y-no-repeat-space-css3-round-css3"><a href="#background-repeat-repeat-repeat-x-repeat-y-no-repeat-space-css3-round-css3" class="headerlink" title="background-repeat: repeat|repeat-x|repeat-y|no-repeat|space(css3)|round(css3) **"></a>background-repeat: repeat|repeat-x|repeat-y|no-repeat|space(css3)|round(css3) **</h2><p>设置是否及如何重复背景图像。默认地，背景图像在水平和垂直方向上重复。</p>
 <p>repeat:背景图像将在垂直方向和水平方向重复，为默认值；<br>repeat-x:背景图像在x轴重复；<br>repeat-y:背景图像在y轴重复；<br>no-repeat:背景图像不重复。</p>
 <p>css2中设置背景时，它经常被标签元素截取而显示不全，css3增加了2个新属性来修复此问题。<br>space：图片以相同的间距平铺且填充整个标签元素，不会改变大小。<br>round：图片自动缩放直到适应且填充整个标签元素。<br>background-repeat 可以定义两个值，来定义横向和竖向repeat：<br>范例：background-repeat: round space; (width 调整 , height 固定) ,background-repeat: space round; (width 固定, height 调整 ),background-repeat: space no-repeat; (定义横向的填充).</p>
-<p><strong>4.background-attachment：scroll|fixed|local（css3） </strong><br>设置背景图像是否固定或者随着页面的其余部分滚动。属性值如下：</p>
+<h2 id="background-attachment：scroll-fixed-local（css3）"><a href="#background-attachment：scroll-fixed-local（css3）" class="headerlink" title="background-attachment：scroll|fixed|local（css3） **"></a>background-attachment：scroll|fixed|local（css3） **</h2><p>设置背景图像是否固定或者随着页面的其余部分滚动。属性值如下：</p>
 <p>fixed：背景图像相对于窗体固定。<br>scroll：背景图像相对于元素固定，也就是说当元素内容滚动时背景图像不会跟着滚动，因为背景图像总是要跟着元素本身。但会随元素的祖先元素或窗体一起滚动。<br>local（css3）：背景图像相对于元素内容固定，也就是说当元素随元素滚动时背景图像也会跟着滚动，因为背景图像总是要跟着内容。（CSS3）</p>
 <p><strong>5.background-position: top left|top center|top right|center left|center center|center right|bottom left|bottom center|bottom right </strong><br>设置背景图像的起始位置.这个属性设置背景原图像（由 background-image 定义）在x轴和y轴的位置，背景图像如果要重复，将从这一点开始。<br>提示：您需要把 background-attachment 属性设置为 “fixed”，才能保证该属性在 Firefox 和 Opera 中正常工作。也可以只设置1个值同时表示x轴和y轴的位置。<br>范例：background-position: center 100%(图片水平居中)</p>
-<h2 id="css3新增属性"><a href="#css3新增属性" class="headerlink" title="css3新增属性"></a>css3新增属性</h2><p><strong>6.background-clip: padding-box|border-box|content-box </strong><br>background-clip 属性规定背景的绘制区域,它能够控制背景显示的位置。属性值如下：</p>
+<h1 id="css3新增属性"><a href="#css3新增属性" class="headerlink" title="css3新增属性"></a>css3新增属性</h1><h2 id="background-clip-padding-box-border-box-content-box"><a href="#background-clip-padding-box-border-box-content-box" class="headerlink" title="background-clip: padding-box|border-box|content-box **"></a>background-clip: padding-box|border-box|content-box **</h2><p>background-clip 属性规定背景的绘制区域,它能够控制背景显示的位置。属性值如下：</p>
 <p>border-box：背景在border边框下开始显示<br>padding-box：背景在padding下开始显示，而不是border边框下开始<br>content-box：背景在内容区域下开始显示，而不是border边框下开始或padding下开始。</p>
-<p><strong>7.background-origin： padding-box|border-box|content-box  </strong><br>规定 background-position 属性相对于什么位置来定位。可以用background-position计算定位是从border，padding或content boxes内容区域算起（类似background-clip）。属性值如下：</p>
+<h2 id="background-origin：-padding-box-border-box-content-box"><a href="#background-origin：-padding-box-border-box-content-box" class="headerlink" title="background-origin： padding-box|border-box|content-box  **"></a>background-origin： padding-box|border-box|content-box  **</h2><p>规定 background-position 属性相对于什么位置来定位。可以用background-position计算定位是从border，padding或content boxes内容区域算起（类似background-clip）。属性值如下：</p>
 <p>border-box：从border边框位置算起<br>padding-box：从padding位置算起<br>content-box：从content-box内容区域位置算起</p>
-<p><strong>8.background-size：length|percentage|cover|contain  </strong><br>background-size 属性规定背景图像的尺寸。属性值如下：</p>
+<h2 id="background-size：length-percentage-cover-contain"><a href="#background-size：length-percentage-cover-contain" class="headerlink" title="background-size：length|percentage|cover|contain  **"></a>background-size：length|percentage|cover|contain  **</h2><p>background-size 属性规定背景图像的尺寸。属性值如下：</p>
 <p>length: 设置背景图像的宽度和高度<br>percentage: 以父元素的百分比来设置背景图像的宽度和高度<br>cover: 把背景图像扩展至足够大，以使背景图像完全覆盖<strong> 背景区域 </strong><br>contain: 把图像图像扩展至最大尺寸，以使其宽度和高度完全适应<strong> 内容区域 </strong><br>范例：background-size:100px 100px;background-size:50%</p>
-<p><strong> 注意： </strong>当背景只使用单一的颜色或者图片做背景时，可以合理使用background简写，而不必使用background-color或者background-image，因为合理使用简写可以帮助你清空其他相关的属性。合理使用简写是一种良好的防卫性编码方式,可以抵御未来的风险。<br>范例：background: rebeccapurple;<br>       background-color: rebeccapurple;<br>以上两行代码并不是等价的，前者简写可以确保得到纯色背景，而后者使用的是展开的形式，其背景有可能显示其他的图片或者渐变图案等等，因为同时还有一条background-image在起作用。</p>
+<h2 id="注意："><a href="#注意：" class="headerlink" title="注意："></a>注意：</h2><p>当背景只使用单一的颜色或者图片做背景时，可以合理使用background简写，而不必使用background-color或者background-image，因为合理使用简写可以帮助你清空其他相关的属性。合理使用简写是一种良好的防卫性编码方式,可以抵御未来的风险。<br>范例：background: rebeccapurple;<br>       background-color: rebeccapurple;<br>以上两行代码并不是等价的，前者简写可以确保得到纯色背景，而后者使用的是展开的形式，其背景有可能显示其他的图片或者渐变图案等等，因为同时还有一条background-image在起作用。</p>
 ]]></content>
     
     <summary type="html">
@@ -137,35 +170,10 @@ $.ajax();
     
     </summary>
     
+      <category term="css" scheme="https://stayhungrystayfoollish.github.io/categories/css/"/>
     
-      <category term="css" scheme="https://stayhungrystayfoollish.github.io/tags/css/"/>
     
-  </entry>
-  
-  <entry>
-    <title>Hello World</title>
-    <link href="https://stayhungrystayfoollish.github.io/2017/01/03/hello-world/"/>
-    <id>https://stayhungrystayfoollish.github.io/2017/01/03/hello-world/</id>
-    <published>2017-01-03T02:36:28.323Z</published>
-    <updated>2017-01-03T02:36:28.323Z</updated>
-    
-    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.
-    
-    </summary>
-    
+      <category term="background" scheme="https://stayhungrystayfoollish.github.io/tags/background/"/>
     
   </entry>
   
