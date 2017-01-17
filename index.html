@@ -363,27 +363,7 @@
       
         
           
-            <h2 id="ajax通用写法："><a href="#ajax通用写法：" class="headerlink" title="ajax通用写法："></a>ajax通用写法：</h2><pre><code>&apos; $.ajax({
-url:&quot;http://www.hzhuti.com&quot;,
-dataType: &quot;json&quot;,
-async: true,
-type: &quot;post&quot;,
-data: {id: value}, 
-beforeSend: function (request) {
-   request.setRequestHeader(&quot;Content-type&quot;,&quot;application/json&quot;);
-       request.setRequestHeader(&quot;Source&quot;,&quot;101&quot;);
-       request.setRequestHeader(&quot;Token&quot;,&quot;aaw--wssw-ss...&quot;);
-},
-success: function (data) {
-
-},
-complete: function() {
-
-},
-error: function() { 
-
-}
-</code></pre><p>}) ‘</p>
+            <h2 id="ajax通用写法："><a href="#ajax通用写法：" class="headerlink" title="ajax通用写法："></a>ajax通用写法：</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">$.ajax(&#123;</div><div class="line">    url: &quot;http://www.hzhuti.com&quot;,</div><div class="line">    dataType: &quot;json&quot;,</div><div class="line">    async: true,</div><div class="line">    type: &quot;post&quot;,</div><div class="line">    data: &#123;id: value&#125;,</div><div class="line">    beforeSend: function (request) &#123;</div><div class="line">        request.setRequestHeader(&quot;Content-type&quot;, &quot;application/json&quot;);</div><div class="line">        request.setRequestHeader(&quot;Source&quot;, &quot;101&quot;);</div><div class="line">        request.setRequestHeader(&quot;Token&quot;, &quot;aaw--wssw-ss...&quot;);</div><div class="line">    &#125;,</div><div class="line">    success: function (data) &#123;</div><div class="line"></div><div class="line">    &#125;,</div><div class="line">    complete: function () &#123;</div><div class="line"></div><div class="line">    &#125;,</div><div class="line">    error: function () &#123;</div><div class="line"></div><div class="line">    &#125;</div><div class="line"></div><div class="line">&#125;)</div></pre></td></tr></table></figure>
 <h2 id="jQuery中-ajax-方法参数详解"><a href="#jQuery中-ajax-方法参数详解" class="headerlink" title="jQuery中$.ajax()方法参数详解"></a>jQuery中$.ajax()方法参数详解</h2><blockquote>
 <p>url:</p>
 <blockquote>
@@ -426,7 +406,7 @@ error: function() {
 </blockquote>
 <p>success:</p>
 <blockquote>
-<p>类型:Function<br>请求成功后调用的回调函数，有两个参数。(1)由服务器返回，并根据dataType参数进行处理后的数据。 (2)描述状态的字符串。<br>         ‘ function(data, textStatus){<br>            //data可能是xmlDoc、jsonObj、html、text等等<br>            this;  //调用本次ajax请求时传递的options参数 ‘</p>
+<p>类型:Function<br>请求成功后调用的回调函数，有两个参数。(1)由服务器返回，并根据dataType参数进行处理后的数据。 (2)描述状态的字符串。<br>    function(data, textStatus){<br>    //data可能是xmlDoc、jsonObj、html、text等等<br>    this;  //调用本次ajax请求时传递的options参数  </p>
 </blockquote>
 <p>erro:</p>
 <blockquote>
@@ -443,21 +423,22 @@ error: function() {
 </blockquote>
 <h2 id="jquery的ajax方法的全部全局事件"><a href="#jquery的ajax方法的全部全局事件" class="headerlink" title="jquery的ajax方法的全部全局事件"></a>jquery的ajax方法的全部全局事件</h2><p>ajax全局事件，有个典型的应用场合：<br>你的页面存在多个甚至为数不少的ajax请求，但是这些ajax请求都有相同的消息机制。ajax请求开始前显示一个提示框，提示“正在读取数据“；ajax请求成功时提示框显示“数据获取成功”；ajax请求结束后隐藏提示框。<br>不使用全局事件的做法是：<br>给$.ajax()加上beforeSend、success、complete回调函数，在回调函数中加上处理提示框。</p>
 <h3 id="全局事件如下："><a href="#全局事件如下：" class="headerlink" title="全局事件如下："></a>全局事件如下：</h3><ul>
-<li><p>ajaxSetup: 设置全局默认设置。该函数用于更改jQuery中AJAX请求的默认设置选项。之后执行的所有AJAX请求，如果对应的选项参数没有设置，将使用更改后的默认设置。<br>使用范例：<br>` //设置AJAX的全局默认选项<br>$.ajaxSetup( {<br>  url: “/index.html” , // 默认URL<br>  aysnc: false , // 默认同步加载<br>  type: “POST” , // 默认使用POST方式<br>  headers: { // 默认添加请求头</p>
-<pre><code>&quot;Author&quot;: &quot;CodePlayer&quot; ,
+<li><p>ajaxSetup: 设置全局默认设置。该函数用于更改jQuery中AJAX请求的默认设置选项。之后执行的所有AJAX请求，如果对应的选项参数没有设置，将使用更改后的默认设置。<br>使用范例：<br>```<br>//设置AJAX的全局默认选项<br>$.ajaxSetup({<br>  url: “/index.html”, // 默认URL<br>  aysnc: false, // 默认同步加载<br>  type: “POST”, // 默认使用POST方式<br>  headers: { // 默认添加请求头</p>
+<pre><code>&quot;Author&quot;: &quot;CodePlayer&quot;,
 &quot;Powered-By&quot;: &quot;CodePlayer&quot;
-</code></pre><p>  } ,<br>  error: function(jqXHR, textStatus, errorMsg){ // 出错时默认的处理函数</p>
+</code></pre><p>  },<br>  error: function (jqXHR, textStatus, errorMsg) { // 出错时默认的处理函数</p>
 <pre><code>// jqXHR 是经过jQuery封装的XMLHttpRequest对象
 // textStatus 可能为： null、&quot;timeout&quot;、&quot;error&quot;、&quot;abort&quot;或&quot;parsererror&quot;
 // errorMsg 可能为： &quot;Not Found&quot;、&quot;Internal Server Error&quot;等
 
 // 提示形如：发送AJAX请求到&quot;/index.html&quot;时出错[404]：Not Found
-alert( &apos;发送AJAX请求到&quot;&apos; + this.url + &apos;&quot;时出错[&apos; + jqXHR.status + &apos;]：&apos; + errorMsg );        
-</code></pre><p>  }<br>} );</p>
+alert(&apos;发送AJAX请求到&quot;&apos; + this.url + &apos;&quot;时出错[&apos; + jqXHR.status + &apos;]：&apos; + errorMsg);
+</code></pre><p>  }<br>});</p>
 </li>
 </ul>
-<p>// 未设置任何参数，但url、async、type、headers、error等参数的默认值均已被$.ajaxSetup()更改(如上)<br>$.ajax( );</p>
-<p>// 设置了url、type、success、error，就使用自己设置的参数值  ` </p>
+<p>// 未设置任何参数，但url、async、type、headers、error等参数的默认值均已被$.ajaxSetup()更改(如上)<br>$.ajax();</p>
+<p>// 设置了url、type、success、error，就使用自己设置的参数值   </p>
+<p>```    </p>
 <ul>
 <li>ajaxStart：ajax请求开始前</li>
 <li>ajaxSend：ajax请求时</li>
