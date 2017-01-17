@@ -143,7 +143,7 @@ $.ajax();
     <link href="https://stayhungrystayfoollish.github.io/2017/01/07/background%E5%B1%9E%E6%80%A7/"/>
     <id>https://stayhungrystayfoollish.github.io/2017/01/07/background属性/</id>
     <published>2017-01-07T08:15:02.000Z</published>
-    <updated>2017-01-17T12:06:29.396Z</updated>
+    <updated>2017-01-17T12:58:28.320Z</updated>
     
     <content type="html"><![CDATA[<p>background背景属性主要用于设置html页面背景的样式，它的值是复合属性值组合，也就是背景单词的值可以跟多个属性值，值与值之间使用一个空格间隔即可。它主要包含以下属性：<br>background-color || background-image || background-repeat || background-attachment || background-position (css2)<br>background-clip || background-origin || background-size || background-break (css3)<br><a id="more"></a></p>
 <h2 id="background-color"><a href="#background-color" class="headerlink" title="background-color:"></a>background-color:</h2><p>为元素设置一种纯色。这种颜色会填充元素的内容、内边距和边框区域，扩展到元素边框的外边界（但不包括外边距）。如果边框有透明部分（如虚线边框），会透过这些透明部分显示出背景色。</p>
