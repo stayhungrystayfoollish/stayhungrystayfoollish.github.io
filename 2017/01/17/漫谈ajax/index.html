@@ -92,7 +92,7 @@
 <meta property="og:url" content="https://stayhungrystayfoollish.github.io/2017/01/17/漫谈ajax/index.html">
 <meta property="og:site_name" content="Stay Hungry">
 <meta property="og:description" content="ajax通用写法：1234567891011121314151617181920212223$.ajax(&amp;#123;    url: &amp;quot;http://www.hzhuti.com&amp;quot;,    dataType: &amp;quot;json&amp;quot;,    async: true,    type: &amp;quot;post&amp;quot;,    data: &amp;#123;id: valu">
-<meta property="og:updated_time" content="2017-01-17T11:14:37.904Z">
+<meta property="og:updated_time" content="2017-01-17T11:21:51.772Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="漫谈JQuery中的ajax">
 <meta name="twitter:description" content="ajax通用写法：1234567891011121314151617181920212223$.ajax(&amp;#123;    url: &amp;quot;http://www.hzhuti.com&amp;quot;,    dataType: &amp;quot;json&amp;quot;,    async: true,    type: &amp;quot;post&amp;quot;,    data: &amp;#123;id: valu">
@@ -358,10 +358,11 @@
 
       
         <h2 id="ajax通用写法："><a href="#ajax通用写法：" class="headerlink" title="ajax通用写法："></a>ajax通用写法：</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">$.ajax(&#123;</div><div class="line">    url: &quot;http://www.hzhuti.com&quot;,</div><div class="line">    dataType: &quot;json&quot;,</div><div class="line">    async: true,</div><div class="line">    type: &quot;post&quot;,</div><div class="line">    data: &#123;id: value&#125;,</div><div class="line">    beforeSend: function (request) &#123;</div><div class="line">        request.setRequestHeader(&quot;Content-type&quot;, &quot;application/json&quot;);</div><div class="line">        request.setRequestHeader(&quot;Source&quot;, &quot;101&quot;);</div><div class="line">        request.setRequestHeader(&quot;Token&quot;, &quot;aaw--wssw-ss...&quot;);</div><div class="line">    &#125;,</div><div class="line">    success: function (data) &#123;</div><div class="line"></div><div class="line">    &#125;,</div><div class="line">    complete: function () &#123;</div><div class="line"></div><div class="line">    &#125;,</div><div class="line">    error: function () &#123;</div><div class="line"></div><div class="line">    &#125;</div><div class="line"></div><div class="line">&#125;)</div></pre></td></tr></table></figure>
-<h2 id="jQuery中-ajax-方法参数详解"><a href="#jQuery中-ajax-方法参数详解" class="headerlink" title="jQuery中$.ajax()方法参数详解"></a>jQuery中$.ajax()方法参数详解</h2><pre><code>url:
+<h2 id="jQuery中-ajax-方法参数详解"><a href="#jQuery中-ajax-方法参数详解" class="headerlink" title="jQuery中$.ajax()方法参数详解"></a>jQuery中$.ajax()方法参数详解</h2><pre><code>‘url:
 类型:string
-(默认为当前页面地址),是指发送请求页面的地址
+(默认为当前页面地址),是指发送请求页面的地址’
 
+***
 
 type:
 类型: String
