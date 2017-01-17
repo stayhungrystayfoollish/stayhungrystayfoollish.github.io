@@ -106,7 +106,7 @@ type: &amp;quot;post&amp;quot;,
 data: {id: value}, 
 beforeSend: function (request) {
    request.setRequ">
-<meta property="og:updated_time" content="2017-01-17T10:08:21.304Z">
+<meta property="og:updated_time" content="2017-01-17T10:24:50.963Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="漫谈JQuery中的ajax">
 <meta name="twitter:description" content="ajax通用写法：&amp;apos; $.ajax({
@@ -398,7 +398,7 @@ complete: function() {
 error: function() { 
 
 }
-</code></pre><p>})’</p>
+</code></pre><p>}) ‘</p>
 <h2 id="jQuery中-ajax-方法参数详解"><a href="#jQuery中-ajax-方法参数详解" class="headerlink" title="jQuery中$.ajax()方法参数详解"></a>jQuery中$.ajax()方法参数详解</h2><blockquote>
 <p>url:</p>
 <blockquote>
@@ -457,18 +457,30 @@ error: function() {
 </blockquote>
 </blockquote>
 <h2 id="jquery的ajax方法的全部全局事件"><a href="#jquery的ajax方法的全部全局事件" class="headerlink" title="jquery的ajax方法的全部全局事件"></a>jquery的ajax方法的全部全局事件</h2><p>ajax全局事件，有个典型的应用场合：<br>你的页面存在多个甚至为数不少的ajax请求，但是这些ajax请求都有相同的消息机制。ajax请求开始前显示一个提示框，提示“正在读取数据“；ajax请求成功时提示框显示“数据获取成功”；ajax请求结束后隐藏提示框。<br>不使用全局事件的做法是：<br>给$.ajax()加上beforeSend、success、complete回调函数，在回调函数中加上处理提示框。</p>
-<p>###全局事件如下：</p>
-<p>*ajaxSetup: 设置全局默认设置。该函数用于更改jQuery中AJAX请求的默认设置选项。之后执行的所有AJAX请求，如果对应的选项参数没有设置，将使用更改后的默认设置。<br>使用范例：<br>‘//设置AJAX的全局默认选项<br>$.ajaxSetup( {<br>    url: “/index.html” , // 默认URL<br>    aysnc: false , // 默认同步加载<br>    type: “POST” , // 默认使用POST方式<br>    headers: { // 默认添加请求头<br>        “Author”: “CodePlayer” ,<br>        “Powered-By”: “CodePlayer”<br>    } ,<br>    error: function(jqXHR, textStatus, errorMsg){ // 出错时默认的处理函数<br>        // jqXHR 是经过jQuery封装的XMLHttpRequest对象<br>        // textStatus 可能为： null、”timeout”、”error”、”abort”或”parsererror”<br>        // errorMsg 可能为： “Not Found”、”Internal Server Error”等</p>
-<pre><code>    // 提示形如：发送AJAX请求到&quot;/index.html&quot;时出错[404]：Not Found
-    alert( &apos;发送AJAX请求到&quot;&apos; + this.url + &apos;&quot;时出错[&apos; + jqXHR.status + &apos;]：&apos; + errorMsg );        
-}
-</code></pre><p>} );</p>
+<h3 id="全局事件如下："><a href="#全局事件如下：" class="headerlink" title="全局事件如下："></a>全局事件如下：</h3><ul>
+<li><p>ajaxSetup: 设置全局默认设置。该函数用于更改jQuery中AJAX请求的默认设置选项。之后执行的所有AJAX请求，如果对应的选项参数没有设置，将使用更改后的默认设置。<br>使用范例：<br>` //设置AJAX的全局默认选项<br>$.ajaxSetup( {<br>  url: “/index.html” , // 默认URL<br>  aysnc: false , // 默认同步加载<br>  type: “POST” , // 默认使用POST方式<br>  headers: { // 默认添加请求头</p>
+<pre><code>&quot;Author&quot;: &quot;CodePlayer&quot; ,
+&quot;Powered-By&quot;: &quot;CodePlayer&quot;
+</code></pre><p>  } ,<br>  error: function(jqXHR, textStatus, errorMsg){ // 出错时默认的处理函数</p>
+<pre><code>// jqXHR 是经过jQuery封装的XMLHttpRequest对象
+// textStatus 可能为： null、&quot;timeout&quot;、&quot;error&quot;、&quot;abort&quot;或&quot;parsererror&quot;
+// errorMsg 可能为： &quot;Not Found&quot;、&quot;Internal Server Error&quot;等
+
+// 提示形如：发送AJAX请求到&quot;/index.html&quot;时出错[404]：Not Found
+alert( &apos;发送AJAX请求到&quot;&apos; + this.url + &apos;&quot;时出错[&apos; + jqXHR.status + &apos;]：&apos; + errorMsg );        
+</code></pre><p>  }<br>} );</p>
+</li>
+</ul>
 <p>// 未设置任何参数，但url、async、type、headers、error等参数的默认值均已被$.ajaxSetup()更改(如上)<br>$.ajax( );</p>
-<p>// 设置了url、type、success、error，就使用自己设置的参数值’</p>
-<p><em>ajaxStart：ajax请求开始前
-</em>ajaxSend：ajax请求时<br><em>ajaxSuccess：ajax获取数据后
-</em>ajaxComplete：ajax请求完成时<br><em>ajaxError：ajax请求发生错误后
-</em>ajaxStop：ajax请求停止后</p>
+<p>// 设置了url、type、success、error，就使用自己设置的参数值  ` </p>
+<ul>
+<li>ajaxStart：ajax请求开始前</li>
+<li>ajaxSend：ajax请求时</li>
+<li>ajaxSuccess：ajax获取数据后</li>
+<li>ajaxComplete：ajax请求完成时</li>
+<li>ajaxError：ajax请求发生错误后</li>
+<li>ajaxStop：ajax请求停止后</li>
+</ul>
 
       
     </div>
@@ -659,7 +671,7 @@ error: function() {
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#ajax通用写法："><span class="nav-number">1.</span> <span class="nav-text">ajax通用写法：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#jQuery中-ajax-方法参数详解"><span class="nav-number">2.</span> <span class="nav-text">jQuery中$.ajax()方法参数详解</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#jquery的ajax方法的全部全局事件"><span class="nav-number">3.</span> <span class="nav-text">jquery的ajax方法的全部全局事件</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#ajax通用写法："><span class="nav-number">1.</span> <span class="nav-text">ajax通用写法：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#jQuery中-ajax-方法参数详解"><span class="nav-number">2.</span> <span class="nav-text">jQuery中$.ajax()方法参数详解</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#jquery的ajax方法的全部全局事件"><span class="nav-number">3.</span> <span class="nav-text">jquery的ajax方法的全部全局事件</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#全局事件如下："><span class="nav-number">3.1.</span> <span class="nav-text">全局事件如下：</span></a></li></ol></li></ol></div>
             
 
           </div>
