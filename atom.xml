@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://stayhungrystayfoollish.github.io/"/>
-  <updated>2017-01-17T11:57:49.090Z</updated>
+  <updated>2017-02-08T08:05:23.475Z</updated>
   <id>https://stayhungrystayfoollish.github.io/</id>
   
   <author>
@@ -14,6 +14,77 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>CSS Float 详解</title>
+    <link href="https://stayhungrystayfoollish.github.io/2017/02/08/css%E6%B8%85%E9%99%A4%E6%B5%AE%E5%8A%A8%EF%BC%88float%EF%BC%89%E7%9A%84%E6%96%B9%E6%B3%95/"/>
+    <id>https://stayhungrystayfoollish.github.io/2017/02/08/css清除浮动（float）的方法/</id>
+    <published>2017-02-08T04:48:47.000Z</published>
+    <updated>2017-02-08T08:05:23.475Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="css-float定义"><a href="#css-float定义" class="headerlink" title="css float定义"></a>css float定义</h2><p>float属性定义元素浮动到左侧或者右侧。浮动元素会生成块级元素，而不论它本身是何种元素。元素设置float属性之后，不会再独占一行。浮动块可以向左或向右移动，直到它的外边缘碰到包含它的边框或另一个浮动块的框为止。<br>注意：如果一行提供给浮动元素的空间不足，这个元素将会移动到下一行，直至有足够的空间。</p>
+<p>float：none|left|right<br><a id="more"></a></p>
+<h2 id="float带来的问题"><a href="#float带来的问题" class="headerlink" title="float带来的问题"></a>float带来的问题</h2><h3 id="1-float元素不占据正常文档流"><a href="#1-float元素不占据正常文档流" class="headerlink" title="1.float元素不占据正常文档流"></a>1.float元素不占据正常文档流</h3><p>由于浮动块不在文档的普通流中，所以文档的普通流中将浮动块视作不存在。因此浮动块有时会覆盖正常文档流。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&lt;div&gt;</div><div class="line">  &lt;div style = &quot;float:right &quot;&gt;&lt;span&gt;块1&lt;/span&gt; &lt;/div&gt;</div><div class="line">  &lt;div&gt;&lt;span&gt;块2&lt;/span&gt;&lt;/div&gt;</div><div class="line">  &lt;div&gt;&lt;span&gt;块3&lt;/span&gt;&lt;/div&gt;</div><div class="line">&lt;/div&gt;</div></pre></td></tr></table></figure></p>
+<p>IE8和Firefox中因为块1不再处于文档流中，所以它不占据空间，实际上覆盖住了块 2，使块2从视图中消失<br>IE6和IE7中紧跟在浮动元素块1的块2也会跟着浮动</p>
+<h3 id="2-浮动塌陷"><a href="#2-浮动塌陷" class="headerlink" title="2.浮动塌陷"></a>2.浮动塌陷</h3><p>如果父元素只包含浮动元素，且父元素没有设置高度和宽度时，那么父元素的高度会坍塌为0，如果父元素不包含任何可见背景，很难发现这个为题。</p>
+<h3 id="3-IE6双边距"><a href="#3-IE6双边距" class="headerlink" title="3.IE6双边距"></a>3.IE6双边距</h3><p>这个Bug仅当浮动边界和浮动元素的方向相同时出现在浮动元素和容器盒的内边缘之间，在这之后的任意有着相似边界的浮动元素不会呈现双倍边界。只有特定的浮动行的第一个浮动元素会遭遇这个Bug。像居左的情况一样，双倍边界同样神秘地显示在居右的相同方式。</p>
+<p>解决方案: display:inline; </p>
+<h3 id="4-IE6文本产生3像素的bug"><a href="#4-IE6文本产生3像素的bug" class="headerlink" title="4.IE6文本产生3像素的bug"></a>4.IE6文本产生3像素的bug</h3><p>在IE6中，当div1浮动时，相邻的div2会自动空出3px</p>
+<p>解决方案：<br>1.采用补丁的方法，margin-right:-3px<br>2.div2也设置浮动</p>
+<h3 id="6-IE6-IE7-中，底边距-bug"><a href="#6-IE6-IE7-中，底边距-bug" class="headerlink" title="6.IE6,IE7 中，底边距 bug"></a>6.IE6,IE7 中，底边距 bug</h3><p>IE6,IE7 中，底边距 bug是当浮动父元素有浮动子元素时，这些子元素的底边距会被父元素忽略掉。</p>
+<p>解决方案：用父元素的底内补白(padding)代替，缺点是不能换行</p>
+<h2 id="清除float的方法"><a href="#清除float的方法" class="headerlink" title="清除float的方法"></a>清除float的方法</h2><h3 id="1-父级div定义伪类-after和zoom"><a href="#1-父级div定义伪类-after和zoom" class="headerlink" title="1.父级div定义伪类 :after和zoom"></a>1.父级div定义伪类 :after和zoom</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">&lt;style type = &quot;text/css&quot;&gt;</div><div class="line">  clearfloat:after&#123;display:block;clear:both;content:&quot;&quot;;visibility:hidden;height:0;&#125;</div><div class="line">  clearfloat&#123;zoom:1&#125;</div><div class="line">&lt;/style&gt;</div><div class="line"></div><div class="line">&lt;div class=&quot;div1 clearfloat&quot;&gt; </div><div class="line">  &lt;div class=&quot;left&quot;&gt;Left&lt;/div&gt; </div><div class="line">  &lt;div class=&quot;right&quot;&gt;Right&lt;/div&gt; </div><div class="line">&lt;/div&gt;</div></pre></td></tr></table></figure>
+<ul>
+<li>原理:IE8以上和非IE浏览器才支持 :after,zoom(IE专有属性)可解决IE6,IE7浮动问题。与方法2类似，利用伪类往div结尾添加clear：both元素。</li>
+<li>优点：浏览器支持好，不容易出现怪问题（目前大型网站都有使用：腾讯，网易等等）。</li>
+<li>代码多，不少初学者不理解原理，要两句代码结合使用，才能让主流浏览器都支持。</li>
+</ul>
+<p>注释：CSS中zoom:1的作用<br>兼容IE6、IE7、IE8浏览器，经常会遇到一些问题，可以使用zoom:1来解决，有如下作用：<br>触发IE浏览器的haslayout。<br>解决ie下的浮动，margin重叠等一些问题。 </p>
+<h3 id="2-结尾处添加空div标签：clear：both"><a href="#2-结尾处添加空div标签：clear：both" class="headerlink" title="2.结尾处添加空div标签：clear：both"></a>2.结尾处添加空div标签：clear：both</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">&lt;style type = &quot;text/css&quot;&gt;</div><div class="line">  clearfloat&#123;clear:both;&#125;	</div><div class="line">&lt;/style&gt;</div><div class="line"></div><div class="line">&lt;div class=&quot;div1 clearfloat&quot;&gt; </div><div class="line">  &lt;div class=&quot;left&quot;&gt;Left&lt;/div&gt; </div><div class="line">  &lt;div class=&quot;right&quot;&gt;Right&lt;/div&gt; </div><div class="line">  &lt;div class=&quot;clearfloat&quot;&gt; &lt;/div&gt;</div><div class="line">&lt;/div&gt;</div></pre></td></tr></table></figure>
+<ul>
+<li>原理：添加一个空div，利用css提高的clear:both清除浮动，让父级div能自动获取到高度。</li>
+<li>优点：优点：简单，代码少，浏览器支持好，不容易出现怪问题。</li>
+<li>缺点：不少初学者不理解原理；如果页面浮动布局多，就要增加很多空div，浪费空间。</li>
+</ul>
+<h3 id="3-父级div定义overflow：hidden或overflow：auto"><a href="#3-父级div定义overflow：hidden或overflow：auto" class="headerlink" title="3.父级div定义overflow：hidden或overflow：auto"></a>3.父级div定义overflow：hidden或overflow：auto</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">&lt;style type = &quot;text/css&quot;&gt;</div><div class="line">  clearfloat&#123;zoom:1;overflow:hidden;&#125;</div><div class="line">或者</div><div class="line">  clearfloat&#123;zoom:1;overflow:auto;&#125;	</div><div class="line">  </div><div class="line">&lt;/style&gt;</div><div class="line"></div><div class="line">&lt;div class=&quot;div1 clearfloat&quot;&gt; </div><div class="line">  &lt;div class=&quot;left&quot;&gt;Left&lt;/div&gt; </div><div class="line">  &lt;div class=&quot;right&quot;&gt;Right&lt;/div&gt; </div><div class="line">  &lt;div class=&quot;clearfloat&quot;&gt; &lt;/div&gt;</div><div class="line">&lt;/div&gt;</div></pre></td></tr></table></figure>
+<ul>
+<li>原理：必须定义width或zoom:1，同时不能定义height，使用overflow:hidden或overflow:auto，浏览器会自动检查浮动区域的高度。</li>
+<li>优点：简单，代码少，浏览器支持好。</li>
+<li>缺点：overflow:hidden不能和position配合使用，因为超出的尺寸的会被隐藏;overflow:auto内部宽高超过父级div时，会出现滚动条。</li>
+</ul>
+<h3 id="4-父级div定义height"><a href="#4-父级div定义height" class="headerlink" title="4.父级div定义height"></a>4.父级div定义height</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">&lt;style type = &quot;text/css&quot;&gt;</div><div class="line">  clearfloat&#123;height：200px；&#125;	</div><div class="line">&lt;/style&gt;</div><div class="line"></div><div class="line">&lt;div class=&quot;div1 clearfloat&quot;&gt; </div><div class="line">  &lt;div class=&quot;left&quot;&gt;Left&lt;/div&gt; </div><div class="line">  &lt;div class=&quot;right&quot;&gt;Right&lt;/div&gt; </div><div class="line">  &lt;div class=&quot;clearfloat&quot;&gt; &lt;/div&gt;</div><div class="line">&lt;/div&gt;</div></pre></td></tr></table></figure>
+<ul>
+<li>原理：父级div手动定义height，就解决了父级div无法自动获取到高度的问题。</li>
+<li>优点：简单，代码少，浏览器支持好。</li>
+<li>缺点：只适合高度固定的布局，要给出精确的高度，如果高度和父级div不一样时，会产生问题。</li>
+</ul>
+<h3 id="5-父级div也一起浮动"><a href="#5-父级div也一起浮动" class="headerlink" title="5.父级div也一起浮动"></a>5.父级div也一起浮动</h3><ul>
+<li>原理：所有代码一起浮动，就变成了一个整体</li>
+<li>缺点：会产生新的浮动问题。</li>
+</ul>
+<h3 id="6-父级div定义display-table"><a href="#6-父级div定义display-table" class="headerlink" title="6.父级div定义display:table"></a>6.父级div定义display:table</h3><ul>
+<li>原理：将div属性变成表格</li>
+<li>缺点：会产生新的浮动问题。</li>
+</ul>
+<h3 id="7-结尾处加br标签clear-both"><a href="#7-结尾处加br标签clear-both" class="headerlink" title="7.结尾处加br标签clear:both"></a>7.结尾处加br标签clear:both</h3><ul>
+<li>原理：父级div定义zoom:1来解决IE浮动问题，结尾处加br标签clear:both</li>
+<li>不推荐使用</li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;css-float定义&quot;&gt;&lt;a href=&quot;#css-float定义&quot; class=&quot;headerlink&quot; title=&quot;css float定义&quot;&gt;&lt;/a&gt;css float定义&lt;/h2&gt;&lt;p&gt;float属性定义元素浮动到左侧或者右侧。浮动元素会生成块级元素，而不论它本身是何种元素。元素设置float属性之后，不会再独占一行。浮动块可以向左或向右移动，直到它的外边缘碰到包含它的边框或另一个浮动块的框为止。&lt;br&gt;注意：如果一行提供给浮动元素的空间不足，这个元素将会移动到下一行，直至有足够的空间。&lt;/p&gt;
+&lt;p&gt;float：none|left|right&lt;br&gt;
+    
+    </summary>
+    
+      <category term="css" scheme="https://stayhungrystayfoollish.github.io/categories/css/"/>
+    
+    
+      <category term="float" scheme="https://stayhungrystayfoollish.github.io/tags/float/"/>
+    
+  </entry>
   
   <entry>
     <title>Hello World</title>

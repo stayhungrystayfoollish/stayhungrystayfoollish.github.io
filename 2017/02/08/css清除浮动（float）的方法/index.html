@@ -1,0 +1,807 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="float," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Stay Hungry" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
+
+
+
+
+
+
+<meta name="description" content="css float定义float属性定义元素浮动到左侧或者右侧。浮动元素会生成块级元素，而不论它本身是何种元素。元素设置float属性之后，不会再独占一行。浮动块可以向左或向右移动，直到它的外边缘碰到包含它的边框或另一个浮动块的框为止。注意：如果一行提供给浮动元素的空间不足，这个元素将会移动到下一行，直至有足够的空间。
+float：none|left|right">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CSS Float 详解">
+<meta property="og:url" content="https://stayhungrystayfoollish.github.io/2017/02/08/css清除浮动（float）的方法/index.html">
+<meta property="og:site_name" content="Stay Hungry">
+<meta property="og:description" content="css float定义float属性定义元素浮动到左侧或者右侧。浮动元素会生成块级元素，而不论它本身是何种元素。元素设置float属性之后，不会再独占一行。浮动块可以向左或向右移动，直到它的外边缘碰到包含它的边框或另一个浮动块的框为止。注意：如果一行提供给浮动元素的空间不足，这个元素将会移动到下一行，直至有足够的空间。
+float：none|left|right">
+<meta property="og:updated_time" content="2017-02-08T08:05:23.475Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="CSS Float 详解">
+<meta name="twitter:description" content="css float定义float属性定义元素浮动到左侧或者右侧。浮动元素会生成块级元素，而不论它本身是何种元素。元素设置float属性之后，不会再独占一行。浮动块可以向左或向右移动，直到它的外边缘碰到包含它的边框或另一个浮动块的框为止。注意：如果一行提供给浮动元素的空间不足，这个元素将会移动到下一行，直至有足够的空间。
+float：none|left|right">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://stayhungrystayfoollish.github.io/2017/02/08/css清除浮动（float）的方法/"/>
+
+
+
+
+
+  <title> CSS Float 详解 | Stay Hungry </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?751dbfeee5c1ead67b231c7421d16454";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">Stay Hungry</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+    
+      <p class="site-subtitle">stay foolish</p>
+    
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <link itemprop="mainEntityOfPage" href="https://stayhungrystayfoollish.github.io/2017/02/08/css清除浮动（float）的方法/">
+
+  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="Yu Shi">
+    <meta itemprop="description" content="">
+    <meta itemprop="image" content="/images/avatar.jpg">
+  </span>
+
+  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="Stay Hungry">
+    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+      <img style="display:none;" itemprop="url image" alt="Stay Hungry" src="">
+    </span>
+  </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                CSS Float 详解
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-02-08T12:48:47+08:00">
+                2017-02-08
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/css/" itemprop="url" rel="index">
+                    <span itemprop="name">css</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2017/02/08/css清除浮动（float）的方法/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2017/02/08/css清除浮动（float）的方法/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="css-float定义"><a href="#css-float定义" class="headerlink" title="css float定义"></a>css float定义</h2><p>float属性定义元素浮动到左侧或者右侧。浮动元素会生成块级元素，而不论它本身是何种元素。元素设置float属性之后，不会再独占一行。浮动块可以向左或向右移动，直到它的外边缘碰到包含它的边框或另一个浮动块的框为止。<br>注意：如果一行提供给浮动元素的空间不足，这个元素将会移动到下一行，直至有足够的空间。</p>
+<p>float：none|left|right<br><a id="more"></a></p>
+<h2 id="float带来的问题"><a href="#float带来的问题" class="headerlink" title="float带来的问题"></a>float带来的问题</h2><h3 id="1-float元素不占据正常文档流"><a href="#1-float元素不占据正常文档流" class="headerlink" title="1.float元素不占据正常文档流"></a>1.float元素不占据正常文档流</h3><p>由于浮动块不在文档的普通流中，所以文档的普通流中将浮动块视作不存在。因此浮动块有时会覆盖正常文档流。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&lt;div&gt;</div><div class="line">  &lt;div style = &quot;float:right &quot;&gt;&lt;span&gt;块1&lt;/span&gt; &lt;/div&gt;</div><div class="line">  &lt;div&gt;&lt;span&gt;块2&lt;/span&gt;&lt;/div&gt;</div><div class="line">  &lt;div&gt;&lt;span&gt;块3&lt;/span&gt;&lt;/div&gt;</div><div class="line">&lt;/div&gt;</div></pre></td></tr></table></figure></p>
+<p>IE8和Firefox中因为块1不再处于文档流中，所以它不占据空间，实际上覆盖住了块 2，使块2从视图中消失<br>IE6和IE7中紧跟在浮动元素块1的块2也会跟着浮动</p>
+<h3 id="2-浮动塌陷"><a href="#2-浮动塌陷" class="headerlink" title="2.浮动塌陷"></a>2.浮动塌陷</h3><p>如果父元素只包含浮动元素，且父元素没有设置高度和宽度时，那么父元素的高度会坍塌为0，如果父元素不包含任何可见背景，很难发现这个为题。</p>
+<h3 id="3-IE6双边距"><a href="#3-IE6双边距" class="headerlink" title="3.IE6双边距"></a>3.IE6双边距</h3><p>这个Bug仅当浮动边界和浮动元素的方向相同时出现在浮动元素和容器盒的内边缘之间，在这之后的任意有着相似边界的浮动元素不会呈现双倍边界。只有特定的浮动行的第一个浮动元素会遭遇这个Bug。像居左的情况一样，双倍边界同样神秘地显示在居右的相同方式。</p>
+<p>解决方案: display:inline; </p>
+<h3 id="4-IE6文本产生3像素的bug"><a href="#4-IE6文本产生3像素的bug" class="headerlink" title="4.IE6文本产生3像素的bug"></a>4.IE6文本产生3像素的bug</h3><p>在IE6中，当div1浮动时，相邻的div2会自动空出3px</p>
+<p>解决方案：<br>1.采用补丁的方法，margin-right:-3px<br>2.div2也设置浮动</p>
+<h3 id="6-IE6-IE7-中，底边距-bug"><a href="#6-IE6-IE7-中，底边距-bug" class="headerlink" title="6.IE6,IE7 中，底边距 bug"></a>6.IE6,IE7 中，底边距 bug</h3><p>IE6,IE7 中，底边距 bug是当浮动父元素有浮动子元素时，这些子元素的底边距会被父元素忽略掉。</p>
+<p>解决方案：用父元素的底内补白(padding)代替，缺点是不能换行</p>
+<h2 id="清除float的方法"><a href="#清除float的方法" class="headerlink" title="清除float的方法"></a>清除float的方法</h2><h3 id="1-父级div定义伪类-after和zoom"><a href="#1-父级div定义伪类-after和zoom" class="headerlink" title="1.父级div定义伪类 :after和zoom"></a>1.父级div定义伪类 :after和zoom</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">&lt;style type = &quot;text/css&quot;&gt;</div><div class="line">  clearfloat:after&#123;display:block;clear:both;content:&quot;&quot;;visibility:hidden;height:0;&#125;</div><div class="line">  clearfloat&#123;zoom:1&#125;</div><div class="line">&lt;/style&gt;</div><div class="line"></div><div class="line">&lt;div class=&quot;div1 clearfloat&quot;&gt; </div><div class="line">  &lt;div class=&quot;left&quot;&gt;Left&lt;/div&gt; </div><div class="line">  &lt;div class=&quot;right&quot;&gt;Right&lt;/div&gt; </div><div class="line">&lt;/div&gt;</div></pre></td></tr></table></figure>
+<ul>
+<li>原理:IE8以上和非IE浏览器才支持 :after,zoom(IE专有属性)可解决IE6,IE7浮动问题。与方法2类似，利用伪类往div结尾添加clear：both元素。</li>
+<li>优点：浏览器支持好，不容易出现怪问题（目前大型网站都有使用：腾讯，网易等等）。</li>
+<li>代码多，不少初学者不理解原理，要两句代码结合使用，才能让主流浏览器都支持。</li>
+</ul>
+<p>注释：CSS中zoom:1的作用<br>兼容IE6、IE7、IE8浏览器，经常会遇到一些问题，可以使用zoom:1来解决，有如下作用：<br>触发IE浏览器的haslayout。<br>解决ie下的浮动，margin重叠等一些问题。 </p>
+<h3 id="2-结尾处添加空div标签：clear：both"><a href="#2-结尾处添加空div标签：clear：both" class="headerlink" title="2.结尾处添加空div标签：clear：both"></a>2.结尾处添加空div标签：clear：both</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">&lt;style type = &quot;text/css&quot;&gt;</div><div class="line">  clearfloat&#123;clear:both;&#125;	</div><div class="line">&lt;/style&gt;</div><div class="line"></div><div class="line">&lt;div class=&quot;div1 clearfloat&quot;&gt; </div><div class="line">  &lt;div class=&quot;left&quot;&gt;Left&lt;/div&gt; </div><div class="line">  &lt;div class=&quot;right&quot;&gt;Right&lt;/div&gt; </div><div class="line">  &lt;div class=&quot;clearfloat&quot;&gt; &lt;/div&gt;</div><div class="line">&lt;/div&gt;</div></pre></td></tr></table></figure>
+<ul>
+<li>原理：添加一个空div，利用css提高的clear:both清除浮动，让父级div能自动获取到高度。</li>
+<li>优点：优点：简单，代码少，浏览器支持好，不容易出现怪问题。</li>
+<li>缺点：不少初学者不理解原理；如果页面浮动布局多，就要增加很多空div，浪费空间。</li>
+</ul>
+<h3 id="3-父级div定义overflow：hidden或overflow：auto"><a href="#3-父级div定义overflow：hidden或overflow：auto" class="headerlink" title="3.父级div定义overflow：hidden或overflow：auto"></a>3.父级div定义overflow：hidden或overflow：auto</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">&lt;style type = &quot;text/css&quot;&gt;</div><div class="line">  clearfloat&#123;zoom:1;overflow:hidden;&#125;</div><div class="line">或者</div><div class="line">  clearfloat&#123;zoom:1;overflow:auto;&#125;	</div><div class="line">  </div><div class="line">&lt;/style&gt;</div><div class="line"></div><div class="line">&lt;div class=&quot;div1 clearfloat&quot;&gt; </div><div class="line">  &lt;div class=&quot;left&quot;&gt;Left&lt;/div&gt; </div><div class="line">  &lt;div class=&quot;right&quot;&gt;Right&lt;/div&gt; </div><div class="line">  &lt;div class=&quot;clearfloat&quot;&gt; &lt;/div&gt;</div><div class="line">&lt;/div&gt;</div></pre></td></tr></table></figure>
+<ul>
+<li>原理：必须定义width或zoom:1，同时不能定义height，使用overflow:hidden或overflow:auto，浏览器会自动检查浮动区域的高度。</li>
+<li>优点：简单，代码少，浏览器支持好。</li>
+<li>缺点：overflow:hidden不能和position配合使用，因为超出的尺寸的会被隐藏;overflow:auto内部宽高超过父级div时，会出现滚动条。</li>
+</ul>
+<h3 id="4-父级div定义height"><a href="#4-父级div定义height" class="headerlink" title="4.父级div定义height"></a>4.父级div定义height</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">&lt;style type = &quot;text/css&quot;&gt;</div><div class="line">  clearfloat&#123;height：200px；&#125;	</div><div class="line">&lt;/style&gt;</div><div class="line"></div><div class="line">&lt;div class=&quot;div1 clearfloat&quot;&gt; </div><div class="line">  &lt;div class=&quot;left&quot;&gt;Left&lt;/div&gt; </div><div class="line">  &lt;div class=&quot;right&quot;&gt;Right&lt;/div&gt; </div><div class="line">  &lt;div class=&quot;clearfloat&quot;&gt; &lt;/div&gt;</div><div class="line">&lt;/div&gt;</div></pre></td></tr></table></figure>
+<ul>
+<li>原理：父级div手动定义height，就解决了父级div无法自动获取到高度的问题。</li>
+<li>优点：简单，代码少，浏览器支持好。</li>
+<li>缺点：只适合高度固定的布局，要给出精确的高度，如果高度和父级div不一样时，会产生问题。</li>
+</ul>
+<h3 id="5-父级div也一起浮动"><a href="#5-父级div也一起浮动" class="headerlink" title="5.父级div也一起浮动"></a>5.父级div也一起浮动</h3><ul>
+<li>原理：所有代码一起浮动，就变成了一个整体</li>
+<li>缺点：会产生新的浮动问题。</li>
+</ul>
+<h3 id="6-父级div定义display-table"><a href="#6-父级div定义display-table" class="headerlink" title="6.父级div定义display:table"></a>6.父级div定义display:table</h3><ul>
+<li>原理：将div属性变成表格</li>
+<li>缺点：会产生新的浮动问题。</li>
+</ul>
+<h3 id="7-结尾处加br标签clear-both"><a href="#7-结尾处加br标签clear-both" class="headerlink" title="7.结尾处加br标签clear:both"></a>7.结尾处加br标签clear:both</h3><ul>
+<li>原理：父级div定义zoom:1来解决IE浮动问题，结尾处加br标签clear:both</li>
+<li>不推荐使用</li>
+</ul>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/float/" rel="tag"># float</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/01/17/hello-world/" rel="next" title="Hello World">
+                <i class="fa fa-chevron-left"></i> Hello World
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.jpg"
+               alt="Yu Shi" />
+          <p class="site-author-name" itemprop="name">Yu Shi</p>
+          <p class="site-description motion-element" itemprop="description">极简 自由 随心</p>
+        </div>
+        <nav class="site-state motion-element">
+        
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/stayhungrystayfoollish" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://user.yeeyan.org/u/588826" target="_blank" title="Yi-Yan">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  Yi-Yan
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#css-float定义"><span class="nav-number">1.</span> <span class="nav-text">css float定义</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#float带来的问题"><span class="nav-number">2.</span> <span class="nav-text">float带来的问题</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-float元素不占据正常文档流"><span class="nav-number">2.1.</span> <span class="nav-text">1.float元素不占据正常文档流</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-浮动塌陷"><span class="nav-number">2.2.</span> <span class="nav-text">2.浮动塌陷</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-IE6双边距"><span class="nav-number">2.3.</span> <span class="nav-text">3.IE6双边距</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-IE6文本产生3像素的bug"><span class="nav-number">2.4.</span> <span class="nav-text">4.IE6文本产生3像素的bug</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-IE6-IE7-中，底边距-bug"><span class="nav-number">2.5.</span> <span class="nav-text">6.IE6,IE7 中，底边距 bug</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#清除float的方法"><span class="nav-number">3.</span> <span class="nav-text">清除float的方法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-父级div定义伪类-after和zoom"><span class="nav-number">3.1.</span> <span class="nav-text">1.父级div定义伪类 :after和zoom</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-结尾处添加空div标签：clear：both"><span class="nav-number">3.2.</span> <span class="nav-text">2.结尾处添加空div标签：clear：both</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-父级div定义overflow：hidden或overflow：auto"><span class="nav-number">3.3.</span> <span class="nav-text">3.父级div定义overflow：hidden或overflow：auto</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-父级div定义height"><span class="nav-number">3.4.</span> <span class="nav-text">4.父级div定义height</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-父级div也一起浮动"><span class="nav-number">3.5.</span> <span class="nav-text">5.父级div也一起浮动</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-父级div定义display-table"><span class="nav-number">3.6.</span> <span class="nav-text">6.父级div定义display:table</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-结尾处加br标签clear-both"><span class="nav-number">3.7.</span> <span class="nav-text">7.结尾处加br标签clear:both</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Yu Shi</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.0"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+
+
+  
+
+    <script type="text/javascript">
+      var disqus_shortname = 'stayhungrystayfoollish.github.io';
+      var disqus_identifier = '2017/02/08/css清除浮动（float）的方法/';
+
+      var disqus_title = "CSS Float 详解";
+
+
+      function run_disqus_script(disqus_script) {
+        var dsq = document.createElement('script');
+        dsq.type = 'text/javascript';
+        dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      }
+
+      run_disqus_script('count.js');
+
+      
+        var disqus_config = function () {
+            this.page.url = disqus_url;
+            this.page.identifier = disqus_identifier;
+            this.page.title = disqus_title;
+        };
+        run_disqus_script('embed.js');
+      
+
+    </script>
+  
+
+
+
+
+
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+
+</body>
+</html>
